@@ -6,21 +6,26 @@
 
 <style>
 
-p[name^="mis"]{ /*^ nos permite apuntar a una etiqueta con atributo name que inicie por mis*/
+p[name^="mis"]{ 
+/*^ nos permite apuntar a una etiqueta con atributo name que inicie por mis*/
 	color:#F00;
 }
-p[name$="los"]{ /* $ nos permite apubtar a una etiqueta con atributo name que termine por los*/
+p[name$="los"]{ 
+/* $ nos permite apubtar a una etiqueta con atributo name que termine por los*/
 	color:#0F0;
 }
 
-p[name*="emp"]{/* $ nos permite apubtar a una etiqueta con atributo name que contenga por emp*/
+p[name*="emp"]{
+	/* $ nos permite apubtar a una etiqueta con atributo name que contenga por emp*/
 	color:#00F;
 }
 
 p:nth-child(5){
 	color:#C0F;
+	/*p:nth-child(5) lo cual quiere decir que le aplique un estilo a la etiqueta p en la quinta posición hijo*/
 }
-p:first-child{/*le aplica este formato al ultimo hijo de las etiquetas p ene este caso la etiqueta p*/
+p:first-child{
+	/*le aplica este formato al ultimo hijo de las etiquetas p ene este caso la etiqueta p*/
 	color:#FF6;
 }
 p:last-child{/*le aplica este formato al ultimo hijo de las etiquetas p ene este caso la etiqueta p*/
@@ -32,19 +37,43 @@ p:only-child{/*le aplica al unico hijo de una etiqueta */
 }
 #principal{
 	width:500px;
-	background-color:#99F;
+	/*background-color:#99F;*/
 	text-align:center;
 	margin:15px auto;
 	padding:15px;
 	border:3px solid #900;
 	border-radius:10px;
-	box-shadow:#9FC 5px 5px 15px; /*el primero para el color de la sombra el segundo es para la distancia de la sombre sobre el eje de las x y la tercera soble el eje de las y  el ultimo parametro difuminamos la sombra */
+	box-shadow:#9FC 5px 5px 15px; 
+	/*el primero para el color de la sombra el segundo es para la distancia de la sombre sobre el eje de las x y la tercera soble el eje de las y  el ultimo parametro difuminamos la sombra */
+	background:-moz-linear-gradient(top, #006 20%, #6CF 80%); 
+	/*se usa -moz- para mozilla los porcentajes para variar la cantidad de color que deseamos*/
+	background:-webkit-radial-gradient(center, ellipse, #0F0, #9FF);/*se usa -webkit- para chrome */
+	background:-ms-linear-gradient(top, #006, #6CF);/*se usa -ms- para explorer */
+	background:-o-linear-gradient(top, #006, #6CF);/*se usa -o- para opera */
+	/*-moz-transform:scale(1.5) para escalar un elemento*/
+	-webkit-transition:-webkit-transform 1s ease 0.5s; /*tranciciones */
+	
+	
+	
+}
+#principal:hover{
+	-webkit-transform:rotate(5deg); /*para rotar un elemento valor de los grados*/
+}
+
+
+/*Inertar un tipo de fuente */
+
+@font-face{
+	font-family:'Mifuente';
+	src:url(Chalet.ttf);/*la fuente debe estar guardada en la raiz del proyecto*/
 	
 }
 
 #titulo{
-	font:bold 30px Verdana, Geneva, sans-serif;
-	text-shadow:#333 4px 4px 10px;
+	font:bold 30px 'Mifuente';
+	text-shadow:#333 4px 4px 10px; /*para el degradado del texto*/
+	/*Transparecia del texto*/
+	color:rgba(0,0,0,0.5);
 }
 
 
