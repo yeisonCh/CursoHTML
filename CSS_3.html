@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+<style>
+
+p[name^="mis"]{ /*^ nos permite apuntar a una etiqueta con atributo name que inicie por mis*/
+	color:#F00;
+}
+p[name$="los"]{ /* $ nos permite apubtar a una etiqueta con atributo name que termine por los*/
+	color:#0F0;
+}
+
+p[name*="emp"]{/* $ nos permite apubtar a una etiqueta con atributo name que contenga por emp*/
+	color:#00F;
+}
+
+p:nth-child(5){
+	color:#C0F;
+}
+p:first-child{/*le aplica este formato al ultimo hijo de las etiquetas p ene este caso la etiqueta p*/
+	color:#FF6;
+}
+p:last-child{/*le aplica este formato al ultimo hijo de las etiquetas p ene este caso la etiqueta p*/
+	background-color:#CF6;
+}
+
+p:only-child{/*le aplica al unico hijo de una etiqueta */
+	background-color:#CF6;
+}
+#principal{
+	width:500px;
+	background-color:#99F;
+	text-align:center;
+	margin:15px auto;
+	padding:15px;
+	border:3px solid #900;
+	border-radius:10px;
+	box-shadow:#9FC 5px 5px 15px; /*el primero para el color de la sombra el segundo es para la distancia de la sombre sobre el eje de las x y la tercera soble el eje de las y  el ultimo parametro difuminamos la sombra */
+	
+}
+
+#titulo{
+	font:bold 30px Verdana, Geneva, sans-serif;
+	text-shadow:#333 4px 4px 10px;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<header id="principal">
+	<span id="titulo">Estilos css3</span> 
+
+</header>
+	<p name="misElementos">Hola</p>
+    <p name="misElementos">Adios</p>
+    <p name="miEstilos">Enero</p>
+    <p name="ejemplo">Febrero</p>
+    <p name="otro">Marzo</p>
+    <p>Abril</p>
+    <p>Mayo</p>
+	
+    <ol>
+    <li>Frutas</li>
+    <li><p>Manzana</p>
+    <p>Limón</p>
+    <p>Mango</p>
+    <p>Fresa</p>
+    <p>Sandia</p>
+    <p>Melón</p></li>
+    </ol>
+    
+    
+
+
+</body>
+</html>
