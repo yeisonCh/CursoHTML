@@ -24,24 +24,4 @@ ol {padding-left:1.4em; list-style: decimal; }
 
 ul {padding-left:1.4em; list-style:square;}
 q:before, q:after {content:'';}
-/*fin del reset css */
 
-body{
-	font-size:62.5%;
-}
-
-h1{ 
-	font:normal 2.4em Verdana, Geneva, sans-serif;
-	background:-webkit-linear-gradient(top, #009, #6CF);
-	width:35%;
-	border-radius:10px;
-	margin:15px auto;
-	text-align:center;
-	padding:15px;
-	color:#CCC;
-	box-shadow:#00F 5px 5px 15px;/*agregamos la sombra del contenedor*/
-	text-shadow:#FFF 2px 2px 4px;
-	/*agregamos el difuminado del texto  color, distancia horizontal, distancia vertical y difuminado*/
-	
-
-}
