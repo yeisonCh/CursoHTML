@@ -42,6 +42,60 @@ h1{
 	box-shadow:#00F 5px 5px 15px;/*agregamos la sombra del contenedor*/
 	text-shadow:#FFF 2px 2px 4px;
 	/*agregamos el difuminado del texto  color, distancia horizontal, distancia vertical y difuminado*/
-	
 
+}
+
+h2{
+	font:bold 1.7em Verdana, Geneva, sans-serif;
+	margin:0;
+	padding:5px 0 5px 8px;
+	color:#333;
+}
+section{
+	width:91%; /*Ancho de la seccion*/
+	border-top:1px dashed #000000;
+	margin:15px auto;
+}
+
+figure{
+	float:left; /*todos los elementos que estan a contibuación rodean las imagenes*/
+}
+
+figure img{
+	padding:4px;
+	background:#666; /*para darle un fondo a la imagen*/
+	border-radius:15px;
+	/*suavizar transiciones*/
+	/*transition:-webkit-transform:0.3s  ease-in-out 0.4;*/
+	transition:ease-in-out 0.4s;
+	/*sobreado a la caja*/
+	box-shadow:#999 5px 2px 2px;
+	
+}
+
+figure img:hover{/*seudo clase para cuando el mouse pase por encima del objeto*/
+	transform:scale(1.2);
+}
+
+figure figcaption{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:1,4em;
+	text-align:center;
+	margin-top:5px; /*para separar el figcaption de los demas contenedores por arriba*/
+}
+
+footer{
+	clear:both;
+	padding-top:100px;
+	
+}
+
+footer p{
+	width:65%;
+	text-align:center;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:1.7em;
+	color:#009;
+	border-top:1px dashed #000066;
+	margin:10px 8px 0 25px;
 }
