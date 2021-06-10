@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Eventos_Html</title>
+
+<script>
+
+var imagen;
+
+	function tipoimagen(){
+	
+		alert("Notas");
+	}
+	
+	function manejaImagen(){
+		
+		
+		//declaramos una array que nos devuelve una posición 
+		imagen=document.getElementsByTagName("img")[0];
+		
+		
+		//tomamos la variable y le aplicamos el evento addEventListener
+		//este evento resive tres argumentos => el evento, la funcion a ejecutar y un valor boolean
+		imagen.addEventListener("click",tipoimagen,false);
+		
+		imagen.addEventListener("mouseover",crecer,false);
+		
+		imagen.addEventListener("mouseout",normal,false);
+		
+		//document.getElementsByTagName("img")[0].onclick=imagen;
+		
+	}
+	
+	function crecer(){
+		
+		imagen.width=150;
+		imagen.height=150;
+		
+		}
+	
+	function normal(){
+		
+		imagen.width=100;
+		imagen.height=100;
+		
+		}
+	
+	
+	
+	
+window.onload=manejaImagen;
+
+
+
+</script>
+</head>
+
+<body>
+
+	<p><img src="imagenes/modificar.jpg" alt="modificar" width="100" height="100"></p>
+    
+
+</body>
+</html>

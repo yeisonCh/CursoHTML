@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+<script>
+
+var imagen= new Array(3);
+
+	function tipoimagen(){
+	
+		alert("Alumno");
+	}
+	
+	function manejaImagen(){
+		
+		for(var i=0; i<4; i++){
+		
+		//declaramos una array que nos devuelve una posición 
+		imagen[i]=document.getElementsByTagName("img")[i];
+		}
+		
+		//tomamos la variable y le aplicamos el evento addEventListener
+		//este evento resive tres argumentos => el evento, la funcion a ejecutar y un valor boolean
+		
+		
+		
+		imagen[0].addEventListener("mouseover",function(){imagen[0].width=150; imagen[0].height=150;},false);
+		
+		imagen[0].addEventListener("mouseout",function(){imagen[0].width=100; imagen[0].height=100;},false);
+		
+		imagen[0].addEventListener("click",tipoimagen,false);
+		
+		
+		imagen[1].addEventListener("mouseover",function(){imagen[1].width=150; imagen[1].height=150;},false);
+		
+		imagen[1].addEventListener("mouseout",function(){imagen[1].width=100; imagen[1].height=100;},false);
+		
+		imagen[1].addEventListener("click",tipoimagen,false);
+		
+		
+		imagen[2].addEventListener("mouseover",function(){imagen[2].width=150; imagen[2].height=150;},false);
+		
+		imagen[2].addEventListener("mouseout",function(){imagen[2].width=100; imagen[2].height=100;},false);
+		
+		imagen[2].addEventListener("click",tipoimagen,false);
+		
+		
+		imagen[3].addEventListener("mouseover",function(){imagen[3].width=150; imagen[3].height=150;},false);
+		
+		imagen[3].addEventListener("mouseout",function(){imagen[3].width=100; imagen[3].height=100;},false);
+		
+		imagen[3].addEventListener("click",tipoimagen,false);
+		
+		//document.getElementsByTagName("img")[0].onclick=imagen;
+		
+	}
+	
+	/*function crecer(){
+		
+		imagen.width=150;
+		imagen.height=150;
+		
+		}
+	
+	function normal(){
+		
+		imagen.width=100;
+		imagen.height=100;
+		
+		}*/
+	
+	
+	
+window.addEventListener("load",manejaImagen,false);
+
+
+
+</script>
+</head>
+
+<body>
+
+	<p><img src="imagenes/modificar.jpg" alt="modificar" width="100" height="100">&nbsp;&nbsp;<img src="imagenes/notas.jpg" alt="notas" width="100" height="100">&nbsp;&nbsp;<img src="imagenes/profesor.jpg" alt="profesor" width="100" height="100">&nbsp;&nbsp;<img src="imagenes/alumno.jpg" alt="alumno" width="100" height="100"></p>
+    
+
+</body>
+</html>

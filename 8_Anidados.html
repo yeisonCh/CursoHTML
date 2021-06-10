@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+
+<script>
+
+function losEventos(){
+	
+	var parrafo=document.getElementsByTagName("p")[0];
+	
+	var imagen=document.getElementsByTagName("img")[0];
+	
+	//el tercer tercer parametro lo usamos para dar prioridad al desencadenar el evento 
+	//ya que la imagen esta anidad en el parrafo
+	
+	parrafo.addEventListener("click",aviso2,true);
+	
+	imagen.addEventListener("click",aviso1,false);
+	
+	}
+
+
+function aviso1(){
+	
+	alert('Hola soy la imagen');
+	}
+
+function aviso2(){
+	
+	alert("Hola soy el párrafo");
+	
+	}
+	
+window.addEventListener("load",losEventos,false);
+</script>
+
+</head>
+
+<body>
+
+<p><img src="imagenes/modificar.jpg" alt="modificar" width="100" height="100"></p>
+</body>
+</html>
