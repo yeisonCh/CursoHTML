@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#cabeceraweb{
+	
+	background-color:#CF3;
+	}
+#navegacionprincipal{
+	background-color:#3FC;
+	margin-right:auto;
+}
+#barralateral{
+	
+	float:left;  /*para organizar en barra lateral*/
+    background-color:#99C;
+	height:900px;
+}
+
+#contenidoprincipal{
+	background-color:#F3C;
+	margin-left:205px;
+	padding-left:15px;/*para las margenes del texto con respecto a las cajas contenedoras izquierda*/
+	padding-top:10px;/*para las margenes del texto con respecto a las cajas contenedoras superior*/
+}
+#pieprincipal {
+	background-color:#6F9;
+	clear:both; /**/
+	margin-top:10px;
+}
+li{
+	;
+	background-color:#FF0;
+	display:inline;}
+	
+	/*la propiedad display nos muestra los elemtos de la lista uno al lado del otro*/

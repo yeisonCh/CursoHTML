@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insertar video</title>
+<link rel="stylesheet" href="video/aspectoVideo.css">
+<script src="video/funcionalidadBarra.js"></script>
+
+</head>
+
+<body>
+	<section id="video">
+		<video id="miVideo" width="480" >
+        	<source src="video/NORUEGA_480p.mp4">
+        	<!--loop poster="video/Portada video/portada.PNG"-->
+        	<!--el atributo controls se utiliza para visualizar los botones de play y pause-->
+            <!--el atributo loop se utiliza para que el video se repita-->
+    		<!--Podemos insertar el mismo video con otro formato ulilizando la etiqueta source-->
+		</video>
+        
+        <!--Creamos un contenedor para crear la caja de botones de control del video-->
+       <nav>
+       	<div id="botones">
+       		<button type="button" id="btnReproducir">Play</button>
+            
+        </div>
+        
+        <div id="barra">
+        <div id="progreso"></div>
+        
+        </div>
+       
+       
+       
+       </nav>
+       
+    </section>
+</body>
+</html>
