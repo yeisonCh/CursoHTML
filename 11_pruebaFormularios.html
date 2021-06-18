@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Prueba Formulario</title>
+</head>
+
+<body>
+<section>
+<form name="miformulario" id="miformulario" method="get" autocomplete="off">
+<!--autocomplete nos sirve para que la pagina guarde los datos ingresados o me ayude a completar casillas-->
+
+<!--<input type="text" name="Texto" id="Texto">-->
+Email:&nbsp;<input type="email" name="email" id="email" autofocus><br><br>
+Busqueda:&nbsp;<input type="search" name="search" id="search"><br><br>
+<!--Email:&nbsp;<input type="email" name="email" id="email"><br><br><br>
+Busqueda:&nbsp;<input type="search" name="search" id="search"><br><br><br>
+Url:&nbsp;<input type="url" name="url" id="url"><br><br><br>-->
+Edad:&nbsp;<input type="number" name="edad" id="edad" min="0" max="100" step="5" placeholder="multiplos de 5"><br><br><br>
+
+Número:&nbsp;<input type="range" name="numero" id="numero" max="5" max="100" ><br><br><br>
+
+Fecha:&nbsp;<input type="date" name="date" id="date" multiple ><br><br><br>
+Mes:&nbsp;<input type="month" name="date" id="date" ><br><br><br>
+Semanas:&nbsp;<input type="week" name="date" id="date" ><br><br><br>
+Horas:&nbsp;<input type="time" name="date" id="date" ><br><br><br>
+Horas:&nbsp;<input type="datetime" name="date" id="date" ><br><br><br>
+
+c. postal: &nbsp; <input pattern="[0-9]{5}" name="postal" id="postal">
+<!--con patter queremos solo digitos entre 0 y 9 pero solo cinco caractere-->
+
+<!--multiple __funciona para enviar mas de un dato en el mismo campo
+placeholder=""
+pattern=""  -- > validaciones especiales 
+autofocus para enfocar el cursor en la casilla que deseamos-->
+
+<input type="submit" value="enviar">
+
+</form>
+<img src="imagenes/profesor.jpg" width="242" height="208" alt="profesor">
+nombre:&nbsp;<input type="text" name="nombre" id="nombre" form="miformulario">
+
+<!--from nos sirve para asociar un campo a un formulario y poder enviar información -->
+
+</section>
+</body>
+</html>

@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+nav{
+	margin:5px 0;
+}
+#botones{
+	width:100px;
+	height:20px;
+	float:left;
+	
+	
+	}
+#barra{
+	background:#CCC;
+	width:420px;
+	height:16px;
+	border:1px solid #666;
+	padding:3px;
+	margin-left:55px;
+	
+}
+
+/**/
+#progreso{
+	position:absolute; /*para señalarle que la posición es cero*/
+	width:0px;
+	height:16px;
+	background:rgba(0.0.150.2) 
+}
+	
+}

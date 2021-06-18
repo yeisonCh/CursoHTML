@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+<style>
+table{
+	text-align:center;
+	background-color:#9FC;
+	width:25%;
+	margin:auto;
+	border:#0C3 dashed;
+}
+
+td{
+	padding:15px;
+}
+
+
+</style>
+
+<script>
+
+var edad;
+
+function comenzar(){
+	
+	edad=document.getElementById("miEdad");
+	edad.addEventListener("change",cambia_rango,false);
+	
+	document.datos.addEventListener("invalid",validar, true);
+	//se usa true para darle prioridad al evento del formulario 
+	//invalid se desencadena cualdo el formulario presenta un error si falta un dato por completar
+	//yu esto construye un objeto de tipo error
+	
+	document.getElementById("enviar").addEventListener("click",enviar,false);
+	
+	//validación en tiempo real
+	
+	document.datos.addEventListener("input",validarTiempoReal,false);
+	
+}
+
+function cambia_rango(){
+	
+	var salida=document.getElementById("rango");
+	
+	var calculo=edad.value-30;
+	
+	if(calculo <30){
+		calculo=0;
+		edad.value=30;
+	}
+	
+	salida.innerHTML=calculo+"  a  " +edad.value;
+	
+	
+	}
+
+
+function validar(e){
+	
+	var elemento=e.target;
+	//la propiedad target del objeto e no proporciona el objeto o elemento que nos proporciona el error
+	elemento.style.background="#FFDDDD";
+	
+	}
+
+function enviar(){
+	
+	var correcto= document.datos.checkValidity();
+	//checkValidity es un metodo de la API FORMS nos devuelve true si la validadción tiene exito
+	
+	if(correcto==true){
+		
+		
+		document.datos.submit();
+		}
+	
+	}
+	
+function validarTiempoReal(e){
+	//pasamos como parametro el objeto o elemento que esta generando el error
+	var elemento = e.target;
+	
+	if(elemento.validity.valid==true){
+		
+		elemento.style.background="#FFFFFF";
+		}
+		
+		else{
+			
+			elemento.style.background="#FFDDDD";
+			
+			}
+	
+	
+	
+	}
+
+window.addEventListener("load",comenzar,false);
+
+</script>
+
+<body>
+
+<section>
+
+	<form name="datos" method="get">
+    
+    	<table><tr><td>
+        Usuario:</td><td><input pattern="[A-Za-z]{3}" name="usuario" id="usuario" max="10" required> </td></tr>
+        <!--pattern le indicamos que debe ser mayusculas o minusculas pero solo tres caracteres-->
+        <tr><td>
+        Email:</td><td><input type="mail" name="miEmail" id="email" required> </td></tr>
+        <tr><td>
+        Edad:</td><td><input type="range" name="miEdad" id="miEdad" min="0" max="120" value="30" step="30"> </td></td>
+        </tr><td>
+        <tr><td><output id="rango">0 a 30</output>
+        </td></tr>
+        <tr><td>
+        <input type="submit" id="enviar" value="Registro"></td></tr>
+        
+        
+        </table>
+    
+    </form>
+
+
+</section>
+
+
+</body>
+</html>
