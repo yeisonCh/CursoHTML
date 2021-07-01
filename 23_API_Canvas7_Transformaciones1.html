@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>API Canvas trazados curvos </title>
+
+<style>
+
+#lienzo{
+	border:1px solid #F00;
+}
+
+section {
+	width:800px;
+	position:relative;
+	margin:auto;
+}
+
+</style>
+<script>
+
+function comenzar(){
+	
+	var elemento= document.getElementById("lienzo");
+	
+	lienzo=elemento.getContext("2d"); //es de tipo 2d
+	
+		
+	lienzo.font="bold 20px verdana";
+	
+	lienzo.fillText("Hola amigos",50,20);
+	
+	
+	//transladamos el eje de cordenadas del lienzo
+	lienzo.translate(100,100);
+	
+	//para estirar o modificar el tamaño del dibujo
+	lienzo.scale(3,1);
+	
+	//rotar el lienzo
+	
+	lienzo.rotate(Math.PI);
+	
+	//posisionamos el texto para poder verlo
+	
+	lienzo.fillText("Hola amigos",-200,-120);
+	
+	
+	
+	
+}
+
+
+window.addEventListener("load",comenzar, false);
+
+</script>
+
+
+
+</head>
+
+<body>
+
+	<section id="dibujo">
+    	<canvas id="lienzo" width="1200" height="900">
+
+        </canvas>
+    
+    
+    
+    </section>
+
+</body>
+</html>
